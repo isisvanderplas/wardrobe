@@ -9,3 +9,6 @@ izzie = Closet.create!( {name:"Izzie's wardrobe", image_url:"https://i.pinimg.co
 tea = Closet.create!( {name:"Tea's wardrobe", image_url:"https://i.pinimg.com/736x/c6/c7/dd/c6c7dd069481782229c3b290c9099334--open-closets-small-closets.jpg"})
 lara = Closet.create!( {name:"Lara's wardrobe", image_url:"https://obly.com/files/cache/fa22c05b5a0b06677332861f06b3639a_f1440.jpg"})
 lucy = Closet.create!( {name:"Lucy's wardrobe", image_url:"http://kansascitycustomcabinet.com/wp-content/uploads/2013/02/Image11-TCSClosets-960.jpg"})
+
+
+item_1 = ClothesItem.create!( {name:"Super comfy sweater", style:"top", season:"all-year", image_url:"https://vignette4.wikia.nocookie.net/warehouse-13-artifact-database/images/7/73/Sweater.png/revision/latest?cb=20141107001507", in_use: false, description:"my super comfy cable sweater"})
