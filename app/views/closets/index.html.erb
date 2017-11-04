@@ -1,0 +1,13 @@
+<h1>Closets</h1>
+
+<% @closets.each do |closet| %>
+  <p><%= closet.name %></p>
+  <p><%= image_tag closet.image_url %></p>
+  <%= link_to "[Edit]", edit_closet_path(closet) %>
+  <%= link_to "[Delete]", closet_path(closet), method: :delete,
+  data: { confirm: "Are you sure?" }%>
+<% end %>
+
+<p><%= link_to "[New Closet]", new_closet_path %>
+
+</p>
