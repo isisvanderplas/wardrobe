@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171104104747) do
+ActiveRecord::Schema.define(version: 20171104110741) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,9 @@ ActiveRecord::Schema.define(version: 20171104104747) do
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "closet_id"
+    t.index ["closet_id"], name: "index_clothes_items_on_closet_id"
   end
 
+  add_foreign_key "clothes_items", "closets"
 end
