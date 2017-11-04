@@ -3,6 +3,7 @@
 <% @closets.each do |closet| %>
   <p><%= closet.name %></p>
   <p><%= image_tag closet.image_url %></p>
+<<<<<<< HEAD
   <%= link_to "[Edit]", edit_closet_path(closet) %>
   <%= link_to "[Delete]", closet_path(closet), method: :delete,
   data: { confirm: "Are you sure?" }%>
@@ -11,3 +12,10 @@
 <p><%= link_to "[New Closet]", new_closet_path %>
 
 </p>
+=======
+  <%= link_to "[New]", new_closet_path(@closet.id) %>
+  <%= link_to "[Edit]", edit_closet_path(@closet.id) %>
+  <%= link_to "[Delete]", dinosaur_path(@dinosaur.id), method: :delete,
+  data: { confirm: "Are you sure?" } %>
+<% end %>
+>>>>>>> 74d5529abdd6da236677aca5b6ec46248f27c440
