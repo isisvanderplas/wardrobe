@@ -2,4 +2,6 @@
 
 <% @closets.each do |closet| %>
   <p><%= closet.name %></p>
+    <p><%= image_tag closet.image_url %></p>
+  
 <% end %>

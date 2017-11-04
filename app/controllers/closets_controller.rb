@@ -1,5 +1,14 @@
 class ClosetsController < ApplicationController
   def index
-  @closets = Closet.all
-end
+    @closets = Closet.all
+  end
+  def show
+    @closet = Closet.find(params[:id])
+  end
+  # def edit
+  #   @closet = Closet.find(params[:id])
+  # end
+  def new
+   @closet = Closet.new
+  end
 end
