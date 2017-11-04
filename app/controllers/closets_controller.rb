@@ -22,6 +22,7 @@ class ClosetsController < ApplicationController
    else
      render 'edit'
    end
+ end
 
    def destroy
   @closet = Closet.find(params[:id])
@@ -29,6 +30,11 @@ class ClosetsController < ApplicationController
   @closet.destroy
 
   redirect_to closets_path
-end
- end
+  end
+
+  def show
+    @closet = Closet.find(params[:id])
+
+  end
+
 end

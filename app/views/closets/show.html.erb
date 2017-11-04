@@ -1,0 +1,9 @@
+<h1><%= @closet.name %> </h1>
+<h3> In use: </h3>
+<% @closet.clothes_items.each do |item| %>
+  <% if item.in_use %>
+  <%= link_to clothes_item_path(item) do %>
+  <%= image_tag item.image_url %>
+  <% end %>
+ <% end %>
+<% end %>
