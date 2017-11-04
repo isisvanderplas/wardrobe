@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get "closets" => "closets#index"
     get 'closets/new' => "closets#new", as: :new_closet
   get "closets/:id" => "closets#show", as: :closet
-      # get 'closets/:id/edit' => 'closets#edit', as: :edit_closet
-
+      get 'closets/:id/edit' => 'closets#edit', as: :edit_closet
+  patch "dinosaurs/:id" => "dinosaurs#update"
+   delete "closets/:id" => "closets#destroy"
 end
